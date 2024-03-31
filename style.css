@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,  minmax(200px, 1fr));
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "section"
+    "section"
+    "footer";
+    grid-template-rows: auto;
+}
+
+/* Estilos adicionales para pantallas más grandes */
+@media (min-width: 768px) {
+
+}
+
+/* Estilos adicionales para pantallas más grandes */
+@media (min-width: 1024px) {
+
+}
