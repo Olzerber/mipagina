@@ -1,0 +1,13 @@
+Sitios web completos que hayas diseñado y desarrollado, 
+mostrando el diseño, la estructura de código y la funcionalidad interactiva.
+
+Ejemplos de componentes web reutilizables como menús de navegación, 
+galerías de imágenes, formularios interactivos, animaciones, etc.
+Demostraciones de efectos y animaciones creados con CSS y JavaScript.
+
+Diseños responsivos que muestren cómo tus sitios se adaptan a diferentes dispositivos 
+y tamaños de pantalla.
+Ejemplos de integración con APIs y bases de datos si has trabajado en aplicaciones web más complejas.
+Un breve resumen de tus conocimientos técnicos en HTML, CSS, JavaScript y cualquier framework o biblioteca que utilices (React, Vue, etc.).
+El portafolio debe estar bien estructurado, con una navegación clara y enlaces funcionales a tus proyectos en línea o demostraciones interactivas. 
+Recuerda explicar tus procesos, decisiones de diseño y técnicas utilizadas.
