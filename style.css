@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-size: 16px;
-}
+body{font-size: 16px;}
 
 @font-face {
     font-family: 'Montserrat-M';
@@ -15,19 +13,27 @@ body{
     font-family: 'Montserrat-Semi';
     src: url('Montserrat-SemiBold.ttf');
 }
+@font-face {
+    font-family: 'Roboto-L';
+    src: url(Roboto-Light.ttf);
+}
+@font-face {
+    font-family:'Raleway-Medium';
+    src: url(Raleway-Medium.ttf);
+}
 :root{
-        --color-50: #f6f6f6;
-        --color-100: #e7e7e7;
-        --color-200: #d1d1d1;
-        --color-300: #b0b0b0;
-        --color-400: #888888;
-        --color-500: #6d6d6d;
-        --color-600: #5d5d5d;
-        --color-700: #4f4f4f;
-        --color-800: #454545;
-        --color-900: #3d3d3d;
-        --color-930: #1a1a1a;
-        --color-950: #161616;
+    --color-50: #f6f6f6;
+    --color-100: #e7e7e7;
+    --color-200: #d1d1d1;
+    --color-300: #b0b0b0;
+    --color-400: #888888;
+    --color-500: #6d6d6d;
+    --color-600: #5d5d5d;
+    --color-700: #4f4f4f;
+    --color-800: #454545;
+    --color-900: #3d3d3d;
+    --color-930: #1a1a1a;
+    --color-950: #161616;
 }
 .container{
     display: grid;
@@ -45,19 +51,24 @@ body{
 
 .button_responsive{
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 20px;
 }
     .button_responsive a{
         text-decoration: none;
         color: var(--color-100);
     }
+    .material-symbols-outlined{
+        font-size:2rem !important;
+    }
+
 .header{
     grid-area: header;
     background-color: var(--color-950);
     color: var(--color-100);
     width: 100%;
     padding: 20px;
+    user-select: none;
 }
     .header h1{
         font-family: 'Montserrat-Semi';
@@ -67,16 +78,16 @@ body{
         display: flex;
         justify-content: left;
         flex-direction: column;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background-color: var(--color-930);
         position: fixed;
-        top: 70px;
         left: 0;
         right: 0;
         bottom: 0;
         padding: 20px;
         z-index: 1;
+        user-select: none;
     }
 
 /* MENU MOBILE OCULTO */
@@ -87,89 +98,100 @@ body{
     .nav_mobile.show {
         display: block;
     }
-
-    .nav__a {
-        position: relative;
-        border-bottom: 1px solid var(--color-900);
-        border-top: 1px solid var(--color-900);
-        width: 100%;
-        }
         .index{
             border-top: none;
         }
 
-        .nav__a a, .nav__a label{
-            font-family: 'Montserrat-M';
-            font-size: 3rem;
+        .nav_logo{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav_logo a{
             text-decoration: none;
             color: var(--color-100);
-            
         }
-        .dropdown-toggle {
-            background: none;
-            border: none;
-            color: var(--color-100);
+        .nav_logo h1{
+            font-size: 2rem;
+            font-family: 'Montserrat-Semi';
+        }
+        
+        .nav_header {border-top: 1px solid var(--color-400);}
+        .nav_header-start{
+            border-top:none;
+        }
+        .nav_header-end{
+            border-bottom: 1px solid var(--color-400);;
+        }
+        .efect{
+            font-family: 'Montserrat-M';
+            text-decoration: none;
+            background-image: linear-gradient(to left,
+            var(--color-50) 50%, var(--color-300) 50% 100%);
+           /* Tamaño del gradiente */
+           background-size: 200% 100%; 
+           /* Clip del texto al degradado */
+           -webkit-background-clip: text; 
+           /* Texto inicialmente transparente */
+           text-decoration: none;
+           color: transparent;
+           /* Transición suave de la posición del degradado */
+           transition: background-position 0.4s; 
+           font-size: 3rem;
+        }
+        
+        .efect:hover {
+            background-position: 100% 0; 
+        }
+    
+
+        .accordion {
             cursor: pointer;
-          }
-
-/* SIGNO MAS */
-          .dropdown_mas-sign{
-            background-color: transparent;
+            width: 100%;
             border: none;
-            color: var(--color-50);
-          }
-          .mas-sign {
-            font-size: 3rem;
-
+            text-align: left;
+            outline: none;
           }
 
-        .dropdown_content {
+          .panel {
             display: none;
-            position:relative;
-            left: 0;
-            right: 0;
-            top: 100%;
-            min-height: 100px;
-            min-width: 200px;
-            background-color:var(--color-930);
-        }
-        .dropdown_content a{
-            border-bottom: 1px solid var(--color-900);
-            border-top: 1px solid var(--color-900);
-        }
-        .dropdown_content.active {
-            display: flex;
-            justify-content: left;
-            flex-direction: column;
-            padding: 10px;
+            padding: 0 10px;
+
           }
+          .panel-items{
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            padding: 10px ;
+          }
+          .panel-items-a{
+            font-family: 'Raleway-Medium', sans-serif;
+            font-size: 2rem;
+            text-decoration: none;
+            color: var(--color-400);
+          }
+           .panel-items-a:hover{
+            color: var(--color-100);
+            transition: color 0.5s;
+           }
+
+
+/* Estilos close */
+        .nav_logo_close{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+
 
     .nav_button{
         display: none;
     }
-    .input__container{
-        display: flex;
-        width: 200px;
-        position: absolute;
-        top: 70px;
-        background-color: var(--color-900);
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .hidden{
-        display: none;
-    }
-
-    .input__container span{
-        background-color: rgb(105, 105, 105);
-    }
-    .nav__input{
-        width: 100%;
-        height: 40px;
-    }
-
 
 
 

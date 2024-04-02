@@ -3,71 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Misite</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
 </head>
 <body>
     <div class="container">
         <div id="btn-mobile" class="button_responsive">
             <a href="#">
-                <span class="material-symbols-outlined">
-                    format_align_right
-                    </span>
+                <span class="material-symbols-outlined">format_align_right</span>
             </a>
         </div>
         <header class="header">
             <h1 class="header_h1">LOGO</h1>
             <nav class="nav nav_mobile">
-                <div class="nav__a index">
-                    <a href="" class="nav__link index">INICIO</a>
+                <div class="nav_logo">
+                    <h1 class="">LOGO</h1>
+                    <div class="nav_logo_close"><span id="close-icon" class="material-symbols-outlined">close</span></div>
                 </div>
-                    <div class="nav__a" id="dropdown-menu">
-                    <div class="dropdown-toggle">
-                        <a href="#" class="nav__link">PAGES</a>
-                        <button class="dropdown_mas-sign">
-                                <span class="mas-sign">&#43;</span>
-                        </button>
-
-                        <div class="dropdown_content">
-                            <a href="https://www.google.com/">Page 1</a>
-                            <a href="#">Page 2</a>
-                            <a href="#">Page 3</a>
-                            <a href="#">Page 4</a>
+                    <div class="nav_item">
+                        <div class="nav_header nav_header-start">
+                            <a href="#" class="nav_link efect">INICIO</a>
+                    </div>
+                    <div class="nav_item">
+                        <div class="nav_header">
+                            <a href="#" class="accordion nav_link efect">
+                            PAGES <span class="material-symbols-outlined">
+                            add</span></a>
+                            <div class="panel">
+                                <div class="panel-items">
+                                    <a class="panel-items-a" href="https://www.google.com/" target="_blank">Page 1</a>
+                                    <a class="panel-items-a" href="https://www.google.com/" target="_blank">Page 1</a>
+                                    <a class="panel-items-a" href="https://www.google.com/" target="_blank">Page 1</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                <div class="nav_item">
+                    <div class="nav_header">
+                        <a href="#" class="nav_link efect">ABOUT</a>
                     </div>
-                <div class="nav__a">
-                    <a href="" class="nav__link">ABOUT</a></div>
-                <div class="nav_button">
-                    <button type="button">
-                        <span class="material-symbols-outlined">
-                          search</span>
-                    </button>
                 </div>
-                <div class="input__container hidden">
-                    <input class="nav__input" type="search" placeholder="search">
-                    <span class="material-symbols-outlined">
-                     search</span>
-                 </div>
-                <div class="nav__a"><a href="" class="nav__link">CONTACT</a></div>
+                <div class="nav_item">
+                    <div class="nav_header nav_header-end">
+                        <a href="#" class="nav_link efect">CONTACT</a>
+                    </div>
+                </div>
             </nav>
+
         </header>
-        <main class="main">
-           
-        </main>
-        <section class="section1">
-
-        </section>
-        <section class="section2">
-            
-        </section>
-        <footer class="footer">
-
-        </footer>
+        <main class="main"></main>
+        <section class="section1"></section>
+        <section class="section2"></section>
+        <footer class="footer"></footer>
     </div>
     <script src="script.js"></script>
+    
+<script>
+    let acordion = document.getElementsByClassName("accordion");
+    let i;
+    
+    for (i = 0; i < acordion.length; i++) {
+    acordion[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
 </body>
 </html>
