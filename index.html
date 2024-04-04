@@ -18,7 +18,7 @@
             <h1 class="header_h1">LOGO</h1>
             <nav class="nav nav_mobile">
                 <div class="nav_logo">
-                    <h1 class="">LOGO</h1>
+                    <h1 class="nav_logo-h1">LOGO</h1>
                     <div class="nav_logo_close"><span id="close-icon" class="material-symbols-outlined">close</span></div>
                 </div>
                     <div class="nav_item">
@@ -52,30 +52,82 @@
                 </div>
             </nav>
 
+<!---- NAV DESKTOP ---->
+            <nav class="nav_desktop">
+
+                <div class="nav_desktop_logo">
+                    <h1 class="">LOGO</h1>
+                </div>
+
+                <div class="nav_desktop_item">
+                    <div class="nav_desktop_header">
+                        <a href="#" class="desktop_header-link">INICIO</a>
+                    </div>
+                </div>
+                <div class="nav_desktop_item">
+                    <div id="dropdown" class="nav_desktop_header">
+                        <a href="#" class="desktop_header-link">PAGES</a>
+                        <span class="expand_page material-symbols-outlined">expand_more</span>
+                    </div>
+                    <div class="dropdown_content">
+                        <div class="dropdown_links">
+                            <div>
+                                <a class="dropdown-link" href="#"> Page 1</a>
+                            </div>
+                            <div><a class="dropdown-link" href="#"> Page 2</a>
+                            </div>
+                            <div><a class="dropdown-link" href="#"> Page 3</a>
+                            </div>
+                            <div><a class="dropdown-link" href="#"> Page 4</a>
+                            </div>
+                            <div><a class="dropdown-link" href="#"> Page 5</a>
+                            </div>
+                            <div><a class="dropdown-link" href="#"> Page 6</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_desktop_item">
+                    <div class="nav_desktop_header">
+                         <a href="#" class="desktop_header-link">ABOUT</a>
+                    </div>
+                </div>
+                <div class="nav_desktop_item">
+                    <div class="nav_desktop_header">
+                        <a href="#" class="desktop_header-link">CONTACT</a>
+                    </div>
+                </div>
+                <div class="separator-line1"></div>
+                <div class="nav_desktop_item">
+                    <div class="nav_desktop_header">
+                        <div class="icono_search" id="icon_search">
+                            <a class="desktop_header-link" href="#">
+                            <span class="material-symbols-outlined">search</span></a>
+                        </div>
+                        <div class="nav_desktop_input">
+                            <input class="nav_desktop_search" type="search" name="input-search" required minlength="8" maxlength="8" placeholder="Search">
+                            <span class="lupa material-symbols-outlined">search</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator-line2"></div>
+            </nav>
         </header>
-        <main class="main"></main>
+<!---- END HEADER ---->
+
+        <main class="main">
+            <div class="main_img">
+                <img src="main-portada.jpg" alt="" srcset="">
+            </div>
+        </main>
+
+
+
+
         <section class="section1"></section>
         <section class="section2"></section>
         <footer class="footer"></footer>
     </div>
-    <script src="script.js"></script>
-    
-<script>
-    let acordion = document.getElementsByClassName("accordion");
-    let i;
-    
-    for (i = 0; i < acordion.length; i++) {
-    acordion[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-    </script>
-    
+<script src="script.js"></script>
 </body>
 </html>
